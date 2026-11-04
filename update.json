@@ -1,7 +1,7 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "url": "VoidlineSkinStudio.exe",
-  "sha256": "386a9f8695ebb88f5c2ff39e216fb065006d4b88b7398a9e6718d5692ed989c1",
-  "size": 17741312,
-  "notes": "Update-Anzeige unten in der Statusleiste, Updates werden alle 30 Minuten gepr\u00fcft"
+  "sha256": "18dfe3df0054d11c3764fd1a331965b836cb15e9a2f63bc00d4b79e031b2e054",
+  "size": 17744896,
+  "notes": "Update-Anzeige in der Statusleiste, Pr\u00fcfung alle 30 Minuten, Updates funktionieren auch wenn raw.githubusercontent.com blockiert ist"
 }
