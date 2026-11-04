@@ -1,7 +1,7 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "url": "VoidlineSkinStudio.exe",
-  "sha256": "92d60ff1586c27977e329d1f16b3910c483674a99fb1b5433e8378142760852b",
-  "size": 17739776,
-  "notes": "Eigene Bilder, KI-Assistent, fl\u00fcssige Live-Vorschau, automatische Updates"
+  "sha256": "386a9f8695ebb88f5c2ff39e216fb065006d4b88b7398a9e6718d5692ed989c1",
+  "size": 17741312,
+  "notes": "Update-Anzeige unten in der Statusleiste, Updates werden alle 30 Minuten gepr\u00fcft"
 }
