@@ -15,3 +15,10 @@ prüft die SHA-256-Prüfsumme und installiert sie beim nächsten Start (oder sof
 3. Beide Dateien committen und pushen. GitHub legt automatisch einen Release an, und alle Apps aktualisieren sich selbst.
 
 > Das Repo muss **öffentlich** sein, damit die App die Dateien ohne Login abrufen kann.
+
+## Neu in 1.4
+- **Animierte Skins**: Video (MP4/WebM, max. 10 s) hinzufügen – daraus werden 4–16 Einzelbilder, die auf dem Schiff abgespielt werden. Der Export enthält alle Bilder und einen `Frames`-Ordner in der `.rbxmx`.
+- **Bilder-Browser**: „Bilder im Internet suchen“ öffnet ein Browser-Fenster (Pixabay, ambientCG, Poly Haven …). Über ein Bild fahren → „In Skin übernehmen“. Bilder lassen sich auch aus Chrome/Edge direkt ins Studio ziehen.
+- **Community-Galerie**: freigegebene Skins aus dem Discord-Contest ansehen und als Remix öffnen.
+- **Aus Text erstellen**: Skin aus einer Beschreibung wie „roter Drache mit goldenen Streifen“.
+
