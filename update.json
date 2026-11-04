@@ -1,7 +1,7 @@
 {
-  "version": "1.1.2",
+  "version": "1.2.0",
   "url": "VoidlineSkinStudio.exe",
-  "sha256": "18dfe3df0054d11c3764fd1a331965b836cb15e9a2f63bc00d4b79e031b2e054",
-  "size": 17744896,
-  "notes": "Update-Anzeige in der Statusleiste, Pr\u00fcfung alle 30 Minuten, Updates funktionieren auch wenn raw.githubusercontent.com blockiert ist"
+  "sha256": "3c86a3085c7fe5b86f88c9b0e4f011aef340d7eba7fae272df1eb2446cf9983b",
+  "size": 17777152,
+  "notes": "Richtige Windows-App: Installation mit Startmen\u00fc, Windows-Suche, Desktop-Verkn\u00fcpfung und Deinstallieren unter Einstellungen > Apps"
 }

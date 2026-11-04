@@ -1,8 +1,10 @@
-VOIDLINE SKIN STUDIO 1.1
+VOIDLINE SKIN STUDIO 1.2
 ========================
 
-Starten
-  VoidlineSkinStudio.exe doppelklicken. Keine Installation nötig.
+Installieren
+  VoidlineSkinStudio.exe doppelklicken -> "Jetzt installieren". Danach ist das Skin Studio eine normale
+  Windows-App: im Startmenü, in der Windows-Suche, optional auf dem Desktop, und unter
+  Einstellungen > Apps deinstallierbar. Keine Adminrechte nötig. Die heruntergeladene .exe kannst du danach löschen.
   Beim ersten Start zeigt Windows evtl. "Der Computer wurde durch Windows geschützt"
   (die App ist nicht signiert) -> "Weitere Informationen" -> "Trotzdem ausführen".
   Benötigt die Microsoft Edge WebView2-Laufzeit (bei Windows 10/11 vorinstalliert).
