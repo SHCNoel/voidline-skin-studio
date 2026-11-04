@@ -1,0 +1,58 @@
+name: Release erstellen
+
+# Sobald eine neue Version (update.json) hochgeladen wird, entsteht automatisch ein
+# GitHub-Release mit der .exe zum Herunterladen.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "update.json"
+      - "VoidlineSkinStudio.exe"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Version lesen
+        id: v
+        run: |
+          VER=$(python3 -c "import json;print(json.load(open('update.json'))['version'])")
+          NOTES=$(python3 -c "import json;print(json.load(open('update.json')).get('notes',''))")
+          SHA=$(sha256sum VoidlineSkinStudio.exe | cut -d' ' -f1)
+          echo "version=$VER" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          {
+            echo "notes<<EOF_NOTES"
+            echo "$NOTES"
+            echo "EOF_NOTES"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Release anlegen (falls neu)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v${{ steps.v.outputs.version }}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG gibt es schon – .exe wird aktualisiert"
+            gh release upload "$TAG" VoidlineSkinStudio.exe --clobber
+            exit 0
+          fi
+          echo "${{ steps.v.outputs.sha }}  VoidlineSkinStudio.exe" > VoidlineSkinStudio.exe.sha256
+          cat > notes.md <<EOF_BODY
+          ## Voidline Skin Studio ${{ steps.v.outputs.version }}
+
+          ${{ steps.v.outputs.notes }}
+
+          **Download:** \`VoidlineSkinStudio.exe\` unten bei *Assets* – Doppelklick, dann „Jetzt installieren“.
+          Bereits installierte Apps aktualisieren sich automatisch.
+
+          SHA-256: \`${{ steps.v.outputs.sha }}\`
+          EOF_BODY
+          gh release create "$TAG" VoidlineSkinStudio.exe VoidlineSkinStudio.exe.sha256 \
+            --title "Voidline Skin Studio ${{ steps.v.outputs.version }}" --notes-file notes.md --latest
