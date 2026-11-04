@@ -1,0 +1,42 @@
+VOIDLINE SKIN STUDIO 1.1
+========================
+
+Starten
+  VoidlineSkinStudio.exe doppelklicken. Keine Installation nötig.
+  Beim ersten Start zeigt Windows evtl. "Der Computer wurde durch Windows geschützt"
+  (die App ist nicht signiert) -> "Weitere Informationen" -> "Trotzdem ausführen".
+  Benötigt die Microsoft Edge WebView2-Laufzeit (bei Windows 10/11 vorinstalliert).
+
+Bedienung
+  Links:   Schiff wählen (Tasten 1-6), Bibliothek deiner Skins, Vorlagen
+  Mitte:   3D-Vorschau – ziehen = drehen, Mausrad = zoomen, rechte Maustaste = verschieben, F = Kamera zurücksetzen
+  Rechts:  Farben, Muster, Panele, Abnutzung, Material, Kennung (Doppelklick auf Regler = Standardwert)
+  Strg+S speichern · Strg+E exportieren · Strg+Z / Strg+Y rückgängig / wiederholen · Strg+N neu
+
+Neu in 1.1
+  EIGENE BILDER   Rechts unter "Eigene Bilder": Bild anklicken, ins Fenster ziehen oder mit Strg+V einfügen.
+                  Aufkleber (Logo, Wappen, Schriftzug) oder Muster (Foto/Textur über den ganzen Rumpf).
+                  "Aufs Schiff klicken" -> Aufkleber direkt am 3D-Modell platzieren und ziehen.
+  KI-ASSISTENT    Stellt Bilder beim Import automatisch frei, schneidet zu und optimiert den Kontrast.
+                  Fotos werden als nahtloses Muster erkannt. Werkzeuge: Freistellen, An Lack angleichen,
+                  In Akzent färben, Nahtlos machen, Lackierfarben aus dem Bild übernehmen.
+                  "Automatisch verbessern" prüft Kontraste, Farbharmonie und Material und korrigiert sie.
+                  Vorschläge: 9 passende Designs zum Anklicken (Würfel = neue Vorschläge).
+                  Der Assistent läuft komplett auf deinem PC, ohne Internet und ohne Konto.
+  LIVE-VORSCHAU   Texturen werden im Hintergrund berechnet – das Schiff aktualisiert sich beim Ziehen sofort.
+  AUTOSAVE        Deine Arbeit wird laufend gesichert und beim nächsten Start wiederhergestellt.
+  AUTO-UPDATE     Die App sucht im Hintergrund nach neuen Versionen (Zahnrad oben rechts), lädt sie
+                  herunter, prüft die Prüfsumme und installiert sie beim nächsten Start
+                  (oder sofort über "Update bereit · Neu starten").
+
+Speicherort
+  Dokumente\Voidline Skin Studio\Skins\<skin-id>\Export\
+
+Skin ins Spiel bringen (Lobby- UND Arena-Place)
+  1. Exportieren.
+  2. Roblox Studio: Rechtsklick auf ReplicatedStorage -> "Insert from File..." -> <skin-id>.rbxmx
+     -> der Skin ist sofort im Skin-Shop (eingefärbt mit der Primärfarbe).
+  3. Echte Texturen: Asset Manager -> Bulk Import -> die 4 PNGs hochladen, die IDs im
+     Export-Dialog eintragen, erneut exportieren und die neue .rbxmx einfügen (alte löschen).
+     Alternativ die IDs direkt an der SurfaceAppearance im Properties-Fenster setzen.
+  Voraussetzung: Voidline-Version 7 (VoidlineLobby_Install.rbxmx / VoidlineArena_Install.rbxmx).
